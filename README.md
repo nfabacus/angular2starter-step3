@@ -10,3 +10,14 @@ Step 3:
   * Make sure to import FormsModule in app.module.ts
 - Event Binding
   Example: toggleImage() and showImage variable in books-list.component.ts
+
+- Directives:
+  3 types of Directives
+  1. Component Directives
+     eg. <bs-app></bs-app>
+  2. Structural Directives
+     eg. ngIf, ngFor, ngStyle
+  3. Attribute Directives
+     eg. <p highlight></p>
+
+Now going to add attribute directive ...
