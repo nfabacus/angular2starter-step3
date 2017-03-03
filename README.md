@@ -27,4 +27,6 @@ Step 3:
           <h4 class="pull-right">
             {{book.bookPrice | currency:'USD':true}}
           </h4>
-  
+
+  2. Custom Pipes
+      Check the custome pipe created in shared folder->pipes folder.
