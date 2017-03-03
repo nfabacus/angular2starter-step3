@@ -19,5 +19,3 @@ Step 3:
      eg. ngIf, ngFor, ngStyle
   3. Attribute Directives
      eg. <p highlight></p>
-
-Now going to add attribute directive ...
