@@ -16,17 +16,12 @@ var BooksListComponent = (function () {
             {
                 bookAuthor: "Tom Jones",
                 bookTitle: "War and Peace 2",
-                bookPrice: "$29.95",
+                bookPrice: 29.95,
                 bookDescription: "Book of historical fiction",
+                publishedOn: new Date('02/11/1921'),
+                inStock: "Yes",
+                booksInStock: 10,
                 bookReviews: 15,
-                bookImageUrl: "app/assets/images/656.jpg"
-            },
-            {
-                bookAuthor: "Robert Jones",
-                bookTitle: "Book of books",
-                bookPrice: "$39.99",
-                bookDescription: "Book of non-fiction",
-                bookReviews: 256,
                 bookImageUrl: "app/assets/images/656.jpg"
             }
         ];

@@ -19,3 +19,12 @@ Step 3:
      eg. ngIf, ngFor, ngStyle
   3. Attribute Directives
      eg. <p highlight></p>
+
+- Pipes:
+  1. Built-in Pipes
+     e.g. |currencies
+          <p><b>Published On:</b>{{book.publishedOn | date:'longDate'}}</p>
+          <h4 class="pull-right">
+            {{book.bookPrice | currency:'USD':true}}
+          </h4>
+  
