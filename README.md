@@ -36,3 +36,9 @@ Step 3:
      It sets up type of each parameter and function within it.
 
      Exporting and importing interface (e.g. IBook)
+
+  Lifecycle Hooks
+    1. Definition
+    2. Most Used Hooks
+    3. Examples
+         ngInit, ngOnChange

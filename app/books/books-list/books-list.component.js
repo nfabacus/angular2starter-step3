@@ -7,20 +7,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-// interface IBook {
-//   bookAuthor: string;
-//   bookTitle: string;
-//   bookPrice: number;
-//   bookDescription: string;
-//   publishedOn: Date;
-//   inStock: string;
-//   booksInStock: number;
-//   bookReviews: number;
-//   bookImageUrl: string;
-//   hardcover?: boolean;
-// }
 var BooksListComponent = (function () {
     function BooksListComponent() {
+        this.animals = ['zebra', 'moose'];
         this.imageWidth = 100;
         this.showImage = true;
         this.booksInStock = 2;
@@ -38,6 +27,16 @@ var BooksListComponent = (function () {
             }
         ];
     }
+    BooksListComponent.prototype.ngOnInit = function () {
+        console.log('Init', this.booksInStock);
+    };
+    BooksListComponent.prototype.ngOnChanges = function () {
+        console.log('new change detected');
+    };
+    BooksListComponent.prototype.changeMethod = function () {
+        this.animals = ['dog', 'cat'];
+        console.log('change method happened', this.animals);
+    };
     BooksListComponent.prototype.toggleImage = function () {
         this.showImage = !this.showImage;
     };
