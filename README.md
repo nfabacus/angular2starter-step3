@@ -29,4 +29,8 @@ Step 3:
           </h4>
 
   2. Custom Pipes
-      Check the custome pipe created in shared folder->pipes folder.
+      Check the custom pipe created in shared folder->pipes folder.
+
+  Interface:
+     e.g. IBook in books-list.component.ts
+     It sets up type of each parameter and function within it.
