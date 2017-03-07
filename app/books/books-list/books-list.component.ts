@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
+import { IBook } from '../book';
 
-interface IBook {
-  bookAuthor: string;
-  bookTitle: string;
-  bookPrice: number;
-  bookDescription: string;
-  publishedOn: Date;
-  inStock: string;
-  booksInStock: number;
-  bookReviews: number;
-  bookImageUrl: string;
-  hardcover?: boolean;
-}
+// interface IBook {
+//   bookAuthor: string;
+//   bookTitle: string;
+//   bookPrice: number;
+//   bookDescription: string;
+//   publishedOn: Date;
+//   inStock: string;
+//   booksInStock: number;
+//   bookReviews: number;
+//   bookImageUrl: string;
+//   hardcover?: boolean;
+// }
 
 @Component({
   moduleId: module.id,

@@ -34,3 +34,5 @@ Step 3:
   Interface:
      e.g. IBook in books-list.component.ts
      It sets up type of each parameter and function within it.
+
+     Exporting and importing interface (e.g. IBook)

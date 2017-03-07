@@ -7,6 +7,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+// interface IBook {
+//   bookAuthor: string;
+//   bookTitle: string;
+//   bookPrice: number;
+//   bookDescription: string;
+//   publishedOn: Date;
+//   inStock: string;
+//   booksInStock: number;
+//   bookReviews: number;
+//   bookImageUrl: string;
+//   hardcover?: boolean;
+// }
 var BooksListComponent = (function () {
     function BooksListComponent() {
         this.imageWidth = 100;
