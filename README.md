@@ -31,7 +31,7 @@ Step 3:
   2. Custom Pipes
       Check the custom pipe created in shared folder->pipes folder.
 
-  Interface:
+  Interface:<br>
      e.g. IBook in books-list.component.ts
      It sets up type of each parameter and function within it.
 
@@ -41,4 +41,10 @@ Step 3:
     1. Definition
     2. Most Used Hooks
     3. Examples
-         ngInit, ngOnChange
+       - ngInit, ngOnChange
+
+
+       Input and Output
+        1. Nested Components
+        2. @Input / @Output
+        3. Custom Events
