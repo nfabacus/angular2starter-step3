@@ -1,5 +1,18 @@
 import { Component } from '@angular/core';
 
+interface IBook {
+  bookAuthor: string;
+  bookTitle: string;
+  bookPrice: number;
+  bookDescription: string;
+  publishedOn: Date;
+  inStock: string;
+  booksInStock: number;
+  bookReviews: number;
+  bookImageUrl: string;
+  hardcover?: boolean;
+}
+
 @Component({
   moduleId: module.id,
   selector: 'bs-books-list',
@@ -11,7 +24,7 @@ export class BooksListComponent {
   showImage: boolean = true;
   booksInStock: number = 2;
 
-  books: any[] = [
+  books: IBook[] = [
     {
       bookAuthor: "Tom Jones",
       bookTitle: "War and Peace 2",
