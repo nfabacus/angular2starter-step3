@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 
 export class BooksListComponent {
 
-  showMessage: string = 'test';
+  favoriteMessage: string = "";
   imageWidth: number = 100;
   showImage: boolean = true;
   booksInStock: number = 2;
@@ -29,7 +29,7 @@ export class BooksListComponent {
       bookAuthor: "Mike Davis",
       bookTitle: "Once Upon A TIme",
       bookPrice: 50.99,
-      bookDescription: "Book of historical fiction",
+      bookDescription: "Book of Adventures",
       publishedOn: new Date('02/11/1996'),
       inStock: "Yes",
       booksInStock: 100,
@@ -38,13 +38,13 @@ export class BooksListComponent {
     }
 ];
 
-
+  onFavoriteClicked(message: string): void {
+    this.favoriteMessage = message;
+  }
 
   toggleImage(): void {
     this.showImage = !this.showImage;
   }
 
-  onNotifyClicked(message: string): void {
-    this.showMessage = message;
-  }
+
 }

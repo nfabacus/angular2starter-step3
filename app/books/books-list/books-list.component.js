@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var BooksListComponent = (function () {
     function BooksListComponent() {
-        this.showMessage = 'test';
+        this.favoriteMessage = "";
         this.imageWidth = 100;
         this.showImage = true;
         this.booksInStock = 2;
@@ -29,7 +29,7 @@ var BooksListComponent = (function () {
                 bookAuthor: "Mike Davis",
                 bookTitle: "Once Upon A TIme",
                 bookPrice: 50.99,
-                bookDescription: "Book of historical fiction",
+                bookDescription: "Book of Adventures",
                 publishedOn: new Date('02/11/1996'),
                 inStock: "Yes",
                 booksInStock: 100,
@@ -38,11 +38,11 @@ var BooksListComponent = (function () {
             }
         ];
     }
+    BooksListComponent.prototype.onFavoriteClicked = function (message) {
+        this.favoriteMessage = message;
+    };
     BooksListComponent.prototype.toggleImage = function () {
         this.showImage = !this.showImage;
-    };
-    BooksListComponent.prototype.onNotifyClicked = function (message) {
-        this.showMessage = message;
     };
     return BooksListComponent;
 }());

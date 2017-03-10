@@ -7,10 +7,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class FavoriteComponent {
+  @Input() favorite: string;
   @Input() reviews: number;
-  @Output() notify: EventEmitter<string> = new EventEmitter<string>();
+  @Output() favoriteClicked: EventEmitter<string> = new EventEmitter<string>();
 
   onClick(): void {
-    this.notify.emit('Message from child');
+    this.favoriteClicked.emit(`The favorite ${this.favorite} was saved`);
   }
 }

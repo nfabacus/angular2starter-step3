@@ -1,7 +1,5 @@
-<h1>Hello world {{ reviews }}</h1>
-
-<div class="container" (click)="onClick()">
-  <button class="btn btn-info">
-    Triffer notify
-  </button>
+<div class="fave" [title]="favorite" (click)="onClick()">
+  <h3>Add to Favorite: <i class="fa fa-heart"
+                        [class.faveSelected]="isSelected(save)"
+    >&nbsp; {{ reviews }}</i></h3>
 </div>
