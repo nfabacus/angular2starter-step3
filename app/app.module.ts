@@ -5,6 +5,7 @@ import { AppComponent }   from './app.component';
 import { BooksListComponent }   from './books/books-list/books-list.component';
 import { HighlightDirective } from './shared/highlight.directive';
 import { TruncatePipe } from './shared/pipes/truncate.pipe';
+import { FavoriteComponent } from './favorites/favorite.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
@@ -12,7 +13,8 @@ import { TruncatePipe } from './shared/pipes/truncate.pipe';
     AppComponent,
     BooksListComponent,
     HighlightDirective,
-    TruncatePipe
+    TruncatePipe,
+    FavoriteComponent
    ],
   bootstrap:    [ AppComponent ]
 })

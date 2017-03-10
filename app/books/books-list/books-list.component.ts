@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -6,22 +6,9 @@ import { Component, OnInit, OnChanges } from '@angular/core';
   templateUrl: 'books-list.component.html'
 })
 
-export class BooksListComponent implements OnInit, OnChanges {
+export class BooksListComponent {
 
-  ngOnInit(){
-    console.log('Init', this.booksInStock);
-  }
-
-  ngOnChanges(){
-    console.log('new change detected');
-  }
-
-  changeMethod(): void {
-    this.animals = ['dog','cat'];
-    console.log('change method happened', this.animals);
-  }
-
-  animals:string[]=['zebra', 'moose'];
+  showMessage: string = 'test';
   imageWidth: number = 100;
   showImage: boolean = true;
   booksInStock: number = 2;
@@ -37,6 +24,17 @@ export class BooksListComponent implements OnInit, OnChanges {
       booksInStock: 10,
       bookReviews: 15,
       bookImageUrl: "app/assets/images/656.jpg"
+    },
+    {
+      bookAuthor: "Mike Davis",
+      bookTitle: "Once Upon A TIme",
+      bookPrice: 50.99,
+      bookDescription: "Book of historical fiction",
+      publishedOn: new Date('02/11/1996'),
+      inStock: "Yes",
+      booksInStock: 100,
+      bookReviews: 150,
+      bookImageUrl: "app/assets/images/656.jpg"
     }
 ];
 
@@ -44,5 +42,9 @@ export class BooksListComponent implements OnInit, OnChanges {
 
   toggleImage(): void {
     this.showImage = !this.showImage;
+  }
+
+  onNotifyClicked(message: string): void {
+    this.showMessage = message;
   }
 }

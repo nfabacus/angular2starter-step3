@@ -13,6 +13,7 @@ var app_component_1 = require("./app.component");
 var books_list_component_1 = require("./books/books-list/books-list.component");
 var highlight_directive_1 = require("./shared/highlight.directive");
 var truncate_pipe_1 = require("./shared/pipes/truncate.pipe");
+var favorite_component_1 = require("./favorites/favorite.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,7 +26,8 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             books_list_component_1.BooksListComponent,
             highlight_directive_1.HighlightDirective,
-            truncate_pipe_1.TruncatePipe
+            truncate_pipe_1.TruncatePipe,
+            favorite_component_1.FavoriteComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     })

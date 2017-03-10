@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var BooksListComponent = (function () {
     function BooksListComponent() {
-        this.animals = ['zebra', 'moose'];
+        this.showMessage = 'test';
         this.imageWidth = 100;
         this.showImage = true;
         this.booksInStock = 2;
@@ -24,21 +24,25 @@ var BooksListComponent = (function () {
                 booksInStock: 10,
                 bookReviews: 15,
                 bookImageUrl: "app/assets/images/656.jpg"
+            },
+            {
+                bookAuthor: "Mike Davis",
+                bookTitle: "Once Upon A TIme",
+                bookPrice: 50.99,
+                bookDescription: "Book of historical fiction",
+                publishedOn: new Date('02/11/1996'),
+                inStock: "Yes",
+                booksInStock: 100,
+                bookReviews: 150,
+                bookImageUrl: "app/assets/images/656.jpg"
             }
         ];
     }
-    BooksListComponent.prototype.ngOnInit = function () {
-        console.log('Init', this.booksInStock);
-    };
-    BooksListComponent.prototype.ngOnChanges = function () {
-        console.log('new change detected');
-    };
-    BooksListComponent.prototype.changeMethod = function () {
-        this.animals = ['dog', 'cat'];
-        console.log('change method happened', this.animals);
-    };
     BooksListComponent.prototype.toggleImage = function () {
         this.showImage = !this.showImage;
+    };
+    BooksListComponent.prototype.onNotifyClicked = function (message) {
+        this.showMessage = message;
     };
     return BooksListComponent;
 }());

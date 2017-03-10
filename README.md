@@ -47,4 +47,7 @@ Step 3:
        Input and Output
         1. Nested Components
         2. @Input / @Output
+            Input Example with <bs-favorite> component
+            Output Example with <bs-favorite> component
+
         3. Custom Events
