@@ -12,10 +12,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var FavoriteComponent = (function () {
     function FavoriteComponent() {
+        this.fave = false;
         this.favoriteClicked = new core_1.EventEmitter();
     }
     FavoriteComponent.prototype.onClick = function () {
         this.favoriteClicked.emit("The favorite " + this.favorite + " was saved");
+        this.fave = !this.fave;
+    };
+    FavoriteComponent.prototype.isSelected = function (fave) {
+        if (!fave || !this.fave) {
+            return false;
+        }
+        if (fave) {
+            return true;
+        }
     };
     return FavoriteComponent;
 }());
