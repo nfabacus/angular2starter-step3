@@ -51,3 +51,6 @@ Step 3:
             Output Example with <bs-favorite> component
 
         3. Custom Events
+
+       Services
+         example - Books.service
