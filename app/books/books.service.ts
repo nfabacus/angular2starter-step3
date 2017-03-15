@@ -1,32 +1,17 @@
 import  { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import { IBook } from './book';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class BookService {
 
-  getBooks(): IBook[] {
-    return [{
-      bookAuthor: "Tom Jones",
-      bookTitle: "War and Peace 2",
-      bookPrice: 29.95,
-      bookDescription: "Book of historical fiction",
-      publishedOn: new Date('02/11/1921'),
-      inStock: "Yes",
-      booksInStock: 10,
-      bookReviews: 15,
-      bookImageUrl: "app/assets/images/656.jpg"
-    },
-    {
-      bookAuthor: "Mike Davis",
-      bookTitle: "Once Upon A TIme",
-      bookPrice: 50.99,
-      bookDescription: "Book of Adventures",
-      publishedOn: new Date('02/11/1996'),
-      inStock: "Yes",
-      booksInStock: 100,
-      bookReviews: 150,
-      bookImageUrl: "app/assets/images/656.jpg"
-    }]
+  constructor(private _http:Http){}
+
+  getBooks(): Observable<IBook[]> {
+    return this._http
+      .get('api/books/books.json')
+      .map((response: Response)=> <IBook[]>response.json());
   }
 }

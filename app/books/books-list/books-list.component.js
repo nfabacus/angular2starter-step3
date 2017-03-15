@@ -18,32 +18,16 @@ var BooksListComponent = (function () {
         this.imageWidth = 100;
         this.showImage = true;
         this.booksInStock = 2;
-        this.books = _bookService.getBooks();
     }
-    //   books: any[] = [
-    //     {
-    //       bookAuthor: "Tom Jones",
-    //       bookTitle: "War and Peace 2",
-    //       bookPrice: 29.95,
-    //       bookDescription: "Book of historical fiction",
-    //       publishedOn: new Date('02/11/1921'),
-    //       inStock: "Yes",
-    //       booksInStock: 10,
-    //       bookReviews: 15,
-    //       bookImageUrl: "app/assets/images/656.jpg"
-    //     },
-    //     {
-    //       bookAuthor: "Mike Davis",
-    //       bookTitle: "Once Upon A TIme",
-    //       bookPrice: 50.99,
-    //       bookDescription: "Book of Adventures",
-    //       publishedOn: new Date('02/11/1996'),
-    //       inStock: "Yes",
-    //       booksInStock: 100,
-    //       bookReviews: 150,
-    //       bookImageUrl: "app/assets/images/656.jpg"
-    //     }
-    // ];
+    BooksListComponent.prototype.ngOnInit = function () { this.getBooks(); };
+    BooksListComponent.prototype.getBooks = function () {
+        var _this = this;
+        this._bookService.getBooks()
+            .subscribe(function (books) {
+            console.log("books are: ", books);
+            _this.books = books;
+        }, function (error) { return _this.errorMessage = error; });
+    };
     BooksListComponent.prototype.onFavoriteClicked = function (message) {
         this.favoriteMessage = message;
     };
