@@ -44,16 +44,23 @@ Step 3:
        - ngInit, ngOnChange
 
 
-       Input and Output
-        1. Nested Components
-        2. @Input / @Output
-            Input Example with <bs-favorite> component
-            Output Example with <bs-favorite> component
+  Input and Output
+  1. Nested Components
+  2. @Input / @Output
+      Input Example with <bs-favorite> component
+      Output Example with <bs-favorite> component
 
-        3. Custom Events
+  3. Custom Events
 
-       Services
-         example - Books.service
+  Services
+   example - Books.service
 
-       HTTP AND Observables
-    
+  HTTP AND Observables
+
+  Routing
+   - Simple Routing
+      <router-outlet>
+   - RouterLink
+      menu, buttons
+   - Pass Parameters
+      e.g.book-details
