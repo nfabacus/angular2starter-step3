@@ -12,13 +12,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
+require("rxjs/add/observable/throw");
+require("rxjs/add/operator/do");
+require("rxjs/add/operator/catch");
 var BookService = (function () {
     function BookService(_http) {
         this._http = _http;
     }
     BookService.prototype.getBooks = function () {
         return this._http
-            .get('api/books/books.json')
+            .get('/api/books/books.json')
             .map(function (response) { return response.json(); });
     };
     return BookService;

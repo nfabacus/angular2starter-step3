@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var books_service_1 = require("../books.service");
+var book_service_1 = require("../book.service");
 var BooksListComponent = (function () {
     function BooksListComponent(_bookService) {
         this._bookService = _bookService;
@@ -42,7 +42,7 @@ BooksListComponent = __decorate([
         selector: 'bs-books-list',
         templateUrl: 'books-list.component.html'
     }),
-    __metadata("design:paramtypes", [books_service_1.BookService])
+    __metadata("design:paramtypes", [book_service_1.BookService])
 ], BooksListComponent);
 exports.BooksListComponent = BooksListComponent;
 //# sourceMappingURL=books-list.component.js.map

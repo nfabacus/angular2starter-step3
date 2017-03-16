@@ -15,7 +15,7 @@ var books_list_component_1 = require("./books/books-list/books-list.component");
 var highlight_directive_1 = require("./shared/highlight.directive");
 var truncate_pipe_1 = require("./shared/pipes/truncate.pipe");
 var favorite_component_1 = require("./favorites/favorite.component");
-var books_service_1 = require("./books/books.service");
+var book_service_1 = require("./books/book.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -26,7 +26,7 @@ AppModule = __decorate([
         imports: [platform_browser_1.BrowserModule,
             forms_1.FormsModule,
             http_1.HttpModule],
-        providers: [books_service_1.BookService],
+        providers: [book_service_1.BookService],
         declarations: [
             app_component_1.AppComponent,
             books_list_component_1.BooksListComponent,
