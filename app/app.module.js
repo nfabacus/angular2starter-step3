@@ -14,6 +14,7 @@ var router_1 = require("@angular/router");
 var welcome_component_1 = require("./welcome/welcome.component");
 var app_component_1 = require("./app.component");
 var books_list_component_1 = require("./books/books-list/books-list.component");
+var book_details_component_1 = require("./books/book-details/book-details.component");
 var highlight_directive_1 = require("./shared/highlight.directive");
 var truncate_pipe_1 = require("./shared/pipes/truncate.pipe");
 var favorite_component_1 = require("./favorites/favorite.component");
@@ -31,6 +32,7 @@ AppModule = __decorate([
             router_1.RouterModule.forRoot([
                 { path: 'welcome', component: welcome_component_1.WelcomeComponent },
                 { path: 'books', component: books_list_component_1.BooksListComponent },
+                { path: 'books/:id', component: book_details_component_1.BookDetailsComponent },
                 { path: "", redirectTo: 'welcome', pathMatch: 'full' },
                 { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
             ])],
@@ -38,6 +40,7 @@ AppModule = __decorate([
         declarations: [
             app_component_1.AppComponent,
             books_list_component_1.BooksListComponent,
+            book_details_component_1.BookDetailsComponent,
             welcome_component_1.WelcomeComponent,
             highlight_directive_1.HighlightDirective,
             truncate_pipe_1.TruncatePipe,
