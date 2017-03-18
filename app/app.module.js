@@ -32,7 +32,7 @@ AppModule = __decorate([
             router_1.RouterModule.forRoot([
                 { path: 'welcome', component: welcome_component_1.WelcomeComponent },
                 { path: 'books', component: books_list_component_1.BooksListComponent },
-                { path: 'books/:id', component: book_details_component_1.BookDetailsComponent },
+                { path: 'book/:id', component: book_details_component_1.BookDetailsComponent },
                 { path: "", redirectTo: 'welcome', pathMatch: 'full' },
                 { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
             ])],

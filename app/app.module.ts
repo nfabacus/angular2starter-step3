@@ -21,7 +21,7 @@ import { BookService } from './books/book.service';
                   RouterModule.forRoot([
         { path: 'welcome', component: WelcomeComponent },
         { path: 'books', component: BooksListComponent },
-        { path: 'books/:id', component: BookDetailsComponent },
+        { path: 'book/:id', component: BookDetailsComponent },
         { path: "", redirectTo: 'welcome', pathMatch: 'full'},
         { path: '**', redirectTo: 'welcome', pathMatch: 'full'}
                   ])],
